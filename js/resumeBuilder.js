@@ -11,7 +11,8 @@ var bio = {
 	},
 	"skills": [
 	  "Java", "Visual Basic", "JavaScript", "HTML", "CSS"
-	]
+	],
+	"pic": "https://media.licdn.com/mpr/mpr/shrink_200_200/p/8/005/05e/259/3d8e9fe.jpg"
 };
 
 var education = {
@@ -91,11 +92,37 @@ var work = {
 };
 
 
-var formattedName = HTMLheaderName.replace("%data%", bio.name);
-var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+var formattedBioPic = HTMLbioPic.replace("%data%", bio.pic);
+$("#header").prepend(formattedBioPic);
 
+var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 $("#header").prepend(formattedRole);
+
+var formattedName = HTMLheaderName.replace("%data%", bio.name);
 $("#header").prepend(formattedName);
+
+
+var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+$("#header").append(formattedMobile);
+
+var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
+$("#header").append(formattedEmail);
+
+var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
+$("#header").append(formattedGithub);
+
+var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
+$("#header").append(formattedTwitter);
+
+var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
+$("#header").append(formattedLocation);
+
+
+
+
+
+
+
 
 if(bio.skills.length > 0) {
 	$("#header").append(HTMLskillsStart);
@@ -103,7 +130,7 @@ if(bio.skills.length > 0) {
 	var formattedSkill = "";
 	for(var i = 0; i < bio.skills.length - 1; i++) {
 	  	formattedSkill = HTMLskills.replace("%data%", bio.skills[i]);
-	  	$("#skills").append(formattedSkill);
+	  	$("#header").append(formattedSkill);
 
 	}
 }
