@@ -91,8 +91,11 @@ var work = {
 };
 
 
+var formattedName = HTMLheaderName.replace("%data%", bio.name);
+var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 
-
+$("#header").prepend(formattedRole);
+$("#header").prepend(formattedName);
 
 if(bio.skills.length > 0) {
 	$("#header").append(HTMLskillsStart);
