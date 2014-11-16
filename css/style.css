@@ -221,3 +221,8 @@ span {
     display: block;
   }
 }
+
+.gm-style-iw div {
+  overflow: hidden;
+  white-space: nowrap;
+}
