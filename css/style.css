@@ -11,6 +11,9 @@
   padding-right: 5%;
 }
 
+body {
+  word-wrap: break-word;
+}
 
 h1 {
 
