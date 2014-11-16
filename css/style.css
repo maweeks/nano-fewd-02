@@ -226,3 +226,8 @@ span {
   overflow: hidden;
   white-space: nowrap;
 }
+
+.gm-style-iw {
+   overflow: hidden !important; 
+   line-height: 1.35;
+}
