@@ -197,20 +197,14 @@ function displayFooterContacts() {
 }
 displayFooterContacts();
 
+$(document).click(function(loc) {
+  logClicks(loc.pageX,loc.pageY);
+});
 
-
-
-
-function hideExcess(){
-  $(document).click(function(loc) {
-    logClicks(loc.pageX,loc.pageY);
-  });
-
-  function locationizer(work_obj) {
-    var locationArray = [];
-    for (job in work_obj.jobs) {
-      locationArray.push(work_obj.jobs[job].location);
-    }
-    return locationArray;
+function locationizer(work_obj) {
+  var locationArray = [];
+  for (job in work_obj.jobs) {
+    locationArray.push(work_obj.jobs[job].location);
   }
+  return locationArray;
 }
