@@ -228,12 +228,12 @@ span {
   }
 }
 
-.gm-style-iw div {
-  overflow: hidden;
-  white-space: nowrap;
-}
-
 .gm-style-iw {
    overflow: hidden !important; 
    line-height: 1.35;
+}
+
+.gm-style-iw div {
+  overflow: hidden;
+  white-space: nowrap;
 }
