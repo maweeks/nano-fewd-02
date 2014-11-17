@@ -80,10 +80,12 @@ a {
 }
 
 .welcome-message {
+  display: inline-block;
   font-style: italic;
   font-size: 18px;
   color: #F3F3F3;
   line-height: 28px;
+  margin-top: 20px;
 }
 
 #skillsH3 {
@@ -143,7 +145,7 @@ a {
 }
 
 .center-content {
-  padding: 40px 5%;
+  padding: 20px 5% 25px 5%;
 }
 
 ul {
@@ -186,7 +188,10 @@ span {
     width: 175px;
   }
   .center-content {
-    padding: 40px 5%;
+    padding: 20px 5%;
+  }
+  .welcome-message {
+    margin-top: 5px;
   }
 }
 
@@ -195,7 +200,7 @@ span {
     width: 150px;
   }
   .center-content {
-    padding: 20px 5%;
+    padding: 20px 5% 10px 5%;
   }
   .welcome-message {
     display: none;
@@ -215,7 +220,7 @@ span {
   padding-bottom: 65px;
 }
 
-@media only screen and (min-width: 750px) {
+@media only screen and (min-width: 751px) {
   #skillsH3,
   #skills,
   .biopic {
