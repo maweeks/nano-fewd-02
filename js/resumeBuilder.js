@@ -10,7 +10,7 @@ var bio = {
 		"location": "Canterbury, UK"
 	},
 	"skills": [
-	  "Java", "Visual Basic", "JavaScript", "HTML", "CSS"
+	  ["Java", 3], ["Visual Basic", 4], ["JavaScript", 3], ["HTML", 3], ["CSS", 3]
 	],
 	"pic": "https://media.licdn.com/mpr/mpr/shrink_200_200/p/8/005/05e/259/3d8e9fe.jpg"
 };
@@ -119,12 +119,11 @@ function displayBio() {
   	$("#header").append(HTMLskillsStart);
   	var formattedSkill = "";
   	for(var i = 0; i < bio.skills.length - 1; i++) {
-  	  	formattedSkill = HTMLskills.replace("%data%", bio.skills[i]);
+  	  	formattedSkill = HTMLskills.replace("%data%", bio.skills[i][0]);
   	  	$("#skills").append(formattedSkill);
   	}
   }
 }
-displayBio();
 
 function displayWork() {
 	for(job in work.jobs) {
@@ -138,7 +137,6 @@ function displayWork() {
 		$(".work-entry:last").append(formattedJob);
 	}
 }
-displayWork()
 
 function displayProjects() {
 	for (project in projects.projects) {
@@ -160,7 +158,6 @@ function displayProjects() {
 		}
 	}
 }
-displayProjects();
 
 function displayEducation() {
   // Add schools
@@ -185,16 +182,21 @@ function displayEducation() {
     $(".education-entry:last").append(formattedCourse);
   }
 }
-displayEducation();
 
 function displayMap() {
   $("#mapDiv").append(googleMap);
 }
-displayMap()
 
 function displayFooterContacts() {
   $("#footerContacts").append(formatContact());
 }
+
+//Functions to fill page content.
+displayBio();
+displayWork();
+displayProjects();
+displayEducation();
+displayMap();
 displayFooterContacts();
 
 $(document).click(function(loc) {
