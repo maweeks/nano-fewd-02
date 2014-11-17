@@ -1,7 +1,7 @@
 var bio = {
 	"name": "Matthew Weeks",
-	"role": "Student",
-	"welcomeMessage": "Welcome to my resume, please contact me if you have any questions.",
+	"role": "Web Developer",
+	"welcomeMessage": "Please contact me if you would like to get in touch.",
 	"contacts": {
 		"mobile": "(+44) 7515 772 568",
 		"email": "m_weeks@hotmail.co.uk",

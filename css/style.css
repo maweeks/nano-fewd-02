@@ -15,7 +15,7 @@ h1 {
   font-size: 40px;
   color: #F5A623;
   line-height: 48px;
-  display: inline;
+  display: inline-block;
 }
 
 h2 {
@@ -73,6 +73,10 @@ a {
   text-decoration: none;
   margin-top: 10px;
   display: block;
+}
+
+#role {
+  white-space: nowrap;
 }
 
 .welcome-message {
@@ -139,7 +143,7 @@ a {
 }
 
 .center-content {
-  padding: 5%;
+  padding: 40px 5%;
 }
 
 ul {
@@ -177,24 +181,21 @@ span {
   text-align: center;
 }
 
-@media only screen and (max-width: 1024px) {
-  #letsConnect {
-    margin-top: 5%;
-  }
-}
-
 @media only screen and (max-width:900px) {
   .biopic {
     width: 175px;
   }
+  .center-content {
+    padding: 40px 5%;
+  }
 }
 
 @media only screen and (max-width: 750px) {
-  #letsConnect {
-    margin-top: 10%;
-  }
   .biopic {
     width: 150px;
+  }
+  .center-content {
+    padding: 20px 5%;
   }
   .welcome-message {
     display: none;
@@ -211,7 +212,7 @@ span {
 #mapDiv {
   height: 325px;
   width: 100%;
-  padding-bottom: 5%;
+  padding-bottom: 65px;
 }
 
 @media only screen and (min-width: 750px) {
