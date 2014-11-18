@@ -1,6 +1,6 @@
 var bio = {
   "name": "Matthew Weeks",
-  "role": "Web Developer",
+  "role": "Cloud/Web Developer",
   "welcomeMessage": "Please contact me if you would like to get in touch.",
   "contacts": {
     "mobile": "(+44) 7515 772 568",
@@ -102,7 +102,7 @@ bio.display = function() {
   var formattedName = HTMLheaderName.replace("%data%", bio.name);
   $("#header").prepend(formattedName);
 
-  $("#topContacts").append(bio.displayContacts());
+  $("#topContacts").append(bio.getContacts());
 
   var formattedBioPic = HTMLbioPic.replace("%data%", bio.pic);
   $("#header").append(formattedBioPic);
@@ -120,7 +120,7 @@ bio.display = function() {
   }
 }
 
-bio.displayContacts = function() {
+bio.getContacts = function() {
   var formattedContacts = HTMLmobile.replace("%data%", bio.contacts.mobile);
   formattedContacts += HTMLemail.replace("%data%", bio.contacts.email);
   formattedContacts += HTMLgithub.replace("%data%", bio.contacts.github);
@@ -130,7 +130,7 @@ bio.displayContacts = function() {
 }
 
 bio.displayFooter = function() {
-  $("#footerContacts").append(bio.displayContacts());
+  $("#footerContacts").append(bio.getContacts());
 }
 
 work.display = function() {
@@ -192,13 +192,29 @@ education.display = function() {
 }
 
 skills.display = function() {
-  for(skill in skills) {
-    $("#skillsChart").append(HTMLskillsChartStart);
-    var formattedSkillSkill = HTMLskillsChartSkill.replace("%data%", skills[skill].skill);
-    var formattedSkillLevel = HTMLskillsChartLevel.replace("%data%", skills[skill].level);
-    var formattedSkill = formattedSkillSkill + formattedSkillLevel;
-    $(".skills-entry:last").append(formattedSkill);
-  }
+  // for(i = 0; i < skills.length; i++) {
+  //   $("#chart").append(HTMLskillsChartStart);
+  //   var formattedSkillSkill = HTMLskillsChartSkill.replace("%data%", skills[i].skill);
+  //   var formattedSkillLevel = HTMLskillsChartLevel.replace("%data%", skills[i].level);
+  //   var formattedSkill = formattedSkillSkill + formattedSkillLevel;
+  //   $(".skills-entry:last").append(formattedSkill);
+  //   console.log(i);
+  // }
+  
+  $("#chart").append(HTMLskillsChartStart);
+
+  var data = [4, 8, 15, 16, 23, 42];
+
+  var x = d3.scale.linear()
+      .domain([0, 50])
+      .range([0, 50]);
+
+  d3.select("#skillsChart")
+    .selectAll("div")
+      .data(skills)
+    .enter().append("div")
+      .style("width", function(d) { return x(d.level*18) + "%"; })
+      .text(function(d) { return d.skill; });
 }
 
 function displayMap() {
@@ -207,9 +223,9 @@ function displayMap() {
 
 //Functions to fill page content.
 bio.display();
-work.display();
-projects.display();
-education.display();
+// work.display();
+// projects.display();
+// education.display();
 skills.display();
 displayMap();
 bio.displayFooter();

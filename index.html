@@ -32,6 +32,7 @@
     you can't accomplish with vanilla (regular) JavaScript.
     -->
     <script src="js/jQuery.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
 
     <!-- More on helper.js in the class -->
     <script src="js/helper.js"></script>
@@ -58,19 +59,19 @@
       </div>
       <div style='clear: both;'></div>
       <div id="workExperience" class='gray'>
-        <h2>Work Experience</h2>
+        <h2 class="no-colapse">Work Experience</h2>
       </div>
       <div id="projects">
-        <h2>Projects</h2>
+        <h2 class="no-colapse">Projects</h2>
       </div>
       <div id="education" class='gray'>
-        <h2>Education</h2>
+        <h2 class="no-colapse">Education</h2>
       </div>
-      <div id="skillsChart">
-        <h2>Skills Chart</h2>
+      <div id="chart">
+        <h2 class="no-colapse">Skills Chart</h2>
       </div>
       <div id="mapDiv" class='gray'>
-        <h2>Where I Have Lived and Worked</h2>
+        <h2 class="no-colapse">Where I Have Lived and Worked</h2>
       </div>
       <div id="letsConnect" class='dark-gray'>
         <h2 class='orange center-text'>Let's Connect</h2>
@@ -123,9 +124,9 @@
       if(document.getElementsByClassName("education-entry").length === 0) {
         document.getElementById("education").style.display = "none";
       }
-      if(document.getElementsByClassName("skills-entry").length === 0) {
-        document.getElementById("skillsChart").style.display = "none";
-      }
+      // if(document.getElementsByClassName("skills-entry").length === 0) {
+      //   document.getElementById("skillsChart").style.display = "none";
+      // }
       if(document.getElementsByClassName("flex-item").length === 0) {
         document.getElementById("letsConnect").style.display = "none";
       }
