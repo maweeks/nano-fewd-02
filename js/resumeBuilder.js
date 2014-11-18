@@ -1,21 +1,101 @@
-function displayBio() {
-  var bio = {
-    "name": "Matthew Weeks",
-    "role": "Web Developer",
-    "welcomeMessage": "Please contact me if you would like to get in touch.",
-    "contacts": {
-      "mobile": "(+44) 7515 772 568",
-      "email": "m_weeks@hotmail.co.uk",
-      "github": "maweeks",
-      "twitter": "@mad_mn",
-      "location": "Canterbury, UK"
-    },
-    "skills": [
-      "Java", "Visual Basic", "JavaScript", "HTML", "CSS"
-    ],
-    "pic": "https://media.licdn.com/mpr/mpr/shrink_200_200/p/8/005/05e/259/3d8e9fe.jpg"
-  };
+var bio = {
+  "name": "Matthew Weeks",
+  "role": "Web Developer",
+  "welcomeMessage": "Please contact me if you would like to get in touch.",
+  "contacts": {
+    "mobile": "(+44) 7515 772 568",
+    "email": "m_weeks@hotmail.co.uk",
+    "github": "maweeks",
+    "twitter": "@mad_mn",
+    "location": "Canterbury, UK"
+  },
+  "skills": [
+    "Java", "Visual Basic", "JavaScript", "HTML", "CSS"
+  ],
+  "pic": "https://media.licdn.com/mpr/mpr/shrink_200_200/p/8/005/05e/259/3d8e9fe.jpg"
+};
 
+var education = {
+  "schools": [
+    {
+      "name": "University of Kent",
+      "location": "Canterbury, Kent, UK",
+      "degree": "BSc",
+      "majors": ["Computer Science"],
+      "dates": "Sep 2011 - Jun 2015",
+      "url": "http://www.kent.ac.uk/"
+    },
+    {
+      "name": "Poole Grammar School",
+      "location": "Poole, Dorset, UK",
+      "degree": "A Levels",
+      "majors": ["Chemistry", "Computing", "Maths"],
+      "dates": "Sep 2005 - Jul 2011",
+      "url": "http://www.poolegrammar.com/"
+    }
+  ],
+  "onlineCourses": [
+    {
+      "title": "Front-End Web Developer Nanodegree",
+      "school": "Udacity",
+      "dates": "Sep 2014 - Present",
+      "description" : "Awesome thing",
+      "url": "https://www.udacity.com/course/ud304",
+      "includedCourses" : [
+        {"course": "Intro to HTML and CSS", "dates" : "Sep 2014", "link": "https://www.udacity.com/course/ud304"},
+        {"course": "Version Control with Git and GitHub", "dates" : "Sep 2014", "link": "https://www.udacity.com/course/ud775"},
+        {"course": "JavaScript Basics", "dates" : "Oct 2014", "link": "https://www.udacity.com/course/ud804"},
+        {"course": "Intro to jQuery", "dates" : "Nov 2014", "link": "https://www.udacity.com/course/ud245"}
+      ]
+    }
+  ]
+};
+
+var projects = {
+  "projects": [
+    {
+      "title": "AVOS",
+      "dates": "Jan 2014 - May 2014",
+      "description": "A visualization to improve visibily for OpenStack.",
+      "images": []
+    },
+    {
+      "title": "Portfolio",
+      "dates": "Sep 2014",
+      "description": "A portfolio created using CSS and HTML to showcase my work.",
+      "images": []
+    },
+    {
+      "title": "Interactive Resume",
+      "dates": "Oct 2014",
+      "description": "A webpage to show my skills, education and past work.",
+      "images": []
+    }
+  ]
+};
+
+var skills = [
+  {"skill": "C++", "level": "1"},
+  {"skill": "CSS", "level": "4"},
+  {"skill": "HTML", "level": "4"},
+  {"skill": "Java", "level": "4"},
+  {"skill": "JavaScript", "level": "3"},
+  {"skill": "Visual Basic", "level": "4"}
+]
+
+var work = {
+  "jobs": [
+    {
+      "employer": "Cisco Systems",
+      "title": "Cloud Developer",
+      "location": "San Jose, CA, USA",
+      "dates": "Aug 2013 - Jul 2014",
+      "description": "Working on the OpenSource project OpenStack, projects include creating a visualization tool to give greater visibility of the stack."
+    }
+  ]
+};
+
+function displayBio() {
   var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
   $("#header").prepend(formattedRole);
 
@@ -43,18 +123,6 @@ function displayBio() {
 }
 
 function displayWork() {
-  var work = {
-    "jobs": [
-      {
-        "employer": "Cisco Systems",
-        "title": "Cloud Developer",
-        "location": "San Jose, CA, USA",
-        "dates": "Aug 2013 - Jul 2014",
-        "description": "Working on the OpenSource project OpenStack, projects include creating a visualization tool to give greater visibility of the stack."
-      }
-    ]
-  };
-
 	for(job in work.jobs) {
 		$("#workExperience").append(HTMLworkStart);
 		var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
@@ -68,29 +136,6 @@ function displayWork() {
 }
 
 function displayProjects() {
-  var projects = {
-    "projects": [
-      {
-        "title": "AVOS",
-        "dates": "Jan 2014 - May 2014",
-        "description": "A visualization to improve visibily for OpenStack.",
-        "images": []
-      },
-      {
-        "title": "Portfolio",
-        "dates": "Sep 2014",
-        "description": "A portfolio created using CSS and HTML to showcase my work.",
-        "images": []
-      },
-      {
-        "title": "Interactive Resume",
-        "dates": "Oct 2014",
-        "description": "A webpage to show my skills, education and past work.",
-        "images": []
-      }
-    ]
-  };
-
 	for (project in projects.projects) {
 		$("#projects").append(HTMLprojectStart);
 
@@ -112,47 +157,6 @@ function displayProjects() {
 }
 
 function displayEducation() {
-  var education = {
-    "schools": [
-      {
-        "name": "University of Kent",
-        "location": "Canterbury, Kent, UK",
-        "degree": "BSc",
-        "majors": ["Computer Science"],
-        "dates": "Sep 2011 - Jun 2015",
-        "url": "http://www.kent.ac.uk/"
-      },
-      {
-        "name": "Poole Grammar School",
-        "location": "Poole, Dorset, UK",
-        "degree": "A Levels",
-        "majors": ["Chemistry", "Computing", "Maths"],
-        "dates": "Sep 2005 - Jul 2011",
-        "url": "http://www.poolegrammar.com/"
-      }
-    ],
-    "onlineCourses": [
-      {
-        "title": "Intro to HTML and CSS",
-        "school": "Udacity",
-        "dates": "Sep 2014",
-        "url": "https://www.udacity.com/course/ud304"
-      },
-      {
-        "title": "How to Use Git and GitHub",
-        "school": "Udacity",
-        "dates": "Oct 2014",
-        "url": "https://www.udacity.com/course/ud775"
-      },
-      {
-        "title": "JavaScript Basics",
-        "school": "Udacity",
-        "dates": "Oct 2014",
-        "url": "https://www.udacity.com/course/ud804"
-      }
-    ]
-  };
-
   // Add schools
   for(school in education.schools) {
     $("#education").append(HTMLschoolStart);
@@ -177,22 +181,11 @@ function displayEducation() {
 }
 
 function displaySkillsChart() {
-  var skills = [
-    {"skill": "Java", "level": "3"},
-    {"skill": "Java", "level": "3"},
-    {"skill": "Java", "level": "3"},
-    {"skill": "Java", "level": "3"},
-    {"skill": "Java", "level": "3"},
-    {"skill": "Java", "level": "3"}
-  ]
   for(skill in skills) {
     $("#skillsChart").append(HTMLskillsChartStart);
-    var formattedSkillSkill = HTMLskillsChartLevel.replace("%data%", skills[skill].skill);
+    var formattedSkillSkill = HTMLskillsChartSkill.replace("%data%", skills[skill].skill);
     var formattedSkillLevel = HTMLskillsChartLevel.replace("%data%", skills[skill].level);
     var formattedSkill = formattedSkillSkill + formattedSkillLevel;
-    console.log(formattedSkillSkill);
-    console.log(formattedSkillLevel);
-    console.log(formattedSkill);
     $(".skills-entry:last").append(formattedSkill);
   }
 }
