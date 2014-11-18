@@ -95,7 +95,7 @@ var work = {
   ]
 };
 
-function displayBio() {
+bio.display = function() {
   var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
   $("#header").prepend(formattedRole);
 
@@ -122,7 +122,7 @@ function displayBio() {
   $("#footerContacts").append(HTMLmobile.replace("%data%", bio.contacts.mobile) + HTMLemail.replace("%data%", bio.contacts.email) + HTMLgithub.replace("%data%", bio.contacts.github) + HTMLtwitter.replace("%data%", bio.contacts.twitter) + HTMLlocation.replace("%data%", bio.contacts.location));
 }
 
-function displayWork() {
+work.display = function() {
 	for(job in work.jobs) {
 		$("#workExperience").append(HTMLworkStart);
 		var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
@@ -135,7 +135,7 @@ function displayWork() {
 	}
 }
 
-function displayProjects() {
+projects.display = function() {
 	for (project in projects.projects) {
 		$("#projects").append(HTMLprojectStart);
 
@@ -156,7 +156,7 @@ function displayProjects() {
 	}
 }
 
-function displayEducation() {
+education.display = function() {
   // Add schools
   for(school in education.schools) {
     $("#education").append(HTMLschoolStart);
@@ -180,7 +180,7 @@ function displayEducation() {
   }
 }
 
-function displaySkillsChart() {
+skills.display = function() {
   for(skill in skills) {
     $("#skillsChart").append(HTMLskillsChartStart);
     var formattedSkillSkill = HTMLskillsChartSkill.replace("%data%", skills[skill].skill);
@@ -195,11 +195,11 @@ function displayMap() {
 }
 
 //Functions to fill page content.
-displayBio();
-displayWork();
-displayProjects();
-displayEducation();
-displaySkillsChart();
+bio.display();
+work.display();
+projects.display();
+education.display();
+skills.display();
 displayMap();
 
 $(document).click(function(loc) {
