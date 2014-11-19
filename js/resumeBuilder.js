@@ -218,7 +218,7 @@ function displayMap() {
 bio.display();
 //work.display();
 //projects.display();
-education.display();
+//education.display();
 skills.display();
 displayMap();
 bio.displayFooter();
