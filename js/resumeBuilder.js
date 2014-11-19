@@ -1,5 +1,5 @@
 var bio = {
-  "name": "Matthew Weeks",
+  "name": "Matt Weeks",
   "role": "Cloud/Web Developer",
   "welcomeMessage": "Please contact me if you would like to get in touch.",
   "contacts": {
