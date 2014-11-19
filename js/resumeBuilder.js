@@ -29,7 +29,7 @@ var education = {
       "name": "Poole Grammar School",
       "location": "Poole, Dorset, UK",
       "degree": "A Levels",
-      "majors": ["Chemistry", " Computing", " Maths"],
+      "majors": ["Computing", " Maths", " Chemistry"],
       "dates": "Sep 2005 - Jul 2011",
       "url": "http://www.poolegrammar.com/"
     }
