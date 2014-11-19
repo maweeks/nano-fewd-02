@@ -29,7 +29,7 @@ var education = {
       "name": "Poole Grammar School",
       "location": "Poole, Dorset, UK",
       "degree": "A Levels",
-      "majors": ["Chemistry", "Computing", "Maths"],
+      "majors": ["Chemistry", " Computing", " Maths"],
       "dates": "Sep 2005 - Jul 2011",
       "url": "http://www.poolegrammar.com/"
     }
@@ -40,12 +40,24 @@ var education = {
       "school": "Udacity",
       "dates": "Sep 2014 - Present",
       "description" : "Awesome thing",
-      "url": "https://www.udacity.com/course/ud304",
+      "url": "https://www.udacity.com/course/nd001",
       "includedCourses" : [
-        {"course": "Intro to HTML and CSS", "dates" : "Sep 2014", "link": "https://www.udacity.com/course/ud304"},
-        {"course": "Version Control with Git and GitHub", "dates" : "Sep 2014", "link": "https://www.udacity.com/course/ud775"},
-        {"course": "JavaScript Basics", "dates" : "Oct 2014", "link": "https://www.udacity.com/course/ud804"},
-        {"course": "Intro to jQuery", "dates" : "Nov 2014", "link": "https://www.udacity.com/course/ud245"}
+        {
+          "course": "Intro to HTML and CSS",
+          "link": "https://www.udacity.com/course/ud304"
+        },
+        {
+          "course": "Version Control with Git and GitHub",
+          "link": "https://www.udacity.com/course/ud775"
+        },
+        {
+          "course": "JavaScript Basics",
+          "link": "https://www.udacity.com/course/ud804"
+        },
+        {
+          "course": "Intro to jQuery",
+          "link": "https://www.udacity.com/course/ud245"
+        }
       ]
     }
   ]
@@ -181,13 +193,17 @@ education.display = function() {
     $(".education-entry:last").append(formattedSchool);
   }
   // Add online courses
-  $(".education-entry:last").append(HTMLonlineClasses);
+  $("#education").append(HTMLonlineClasses);
   for(course in education.onlineCourses) {
-    var formattedTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title);
+    $("#education").append(HTMLschoolStart);
+    var formattedTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title).replace("#", education.onlineCourses[course].url);
     var formattedSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school);
     var formattedDates = HTMLonlineDates.replace("%data%", education.onlineCourses[course].dates);
-    var formattedURL = HTMLonlineURL.replace("%data%", education.onlineCourses[course].url);
-    var formattedCourse = formattedTitle + formattedSchool + formattedDates + formattedURL;
+    var formattedSubCourses = "<br/>";
+    for (subCourse in education.onlineCourses[course].includedCourses) {
+      formattedSubCourses += HTMLonlineSubCourseTitle.replace("%data%", education.onlineCourses[course].includedCourses[subCourse].course).replace("#", education.onlineCourses[course].includedCourses[subCourse].link);
+    }
+    var formattedCourse = formattedTitle + formattedSchool + formattedDates + formattedSubCourses;
     $(".education-entry:last").append(formattedCourse);
   }
 }

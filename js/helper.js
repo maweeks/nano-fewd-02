@@ -51,6 +51,7 @@ var HTMLonlineClasses = "<h3>Online Classes</h3>";
 var HTMLonlineTitle = "<a href='#'>%data%";
 var HTMLonlineSchool = " - %data%</a>";
 var HTMLonlineDates = "<div class='date-text'>%data%</div>";
+var HTMLonlineSubCourseTitle = "<a class='subCourse' href='#'>%data%</a>";
 var HTMLonlineURL = "<br><a href='#'>%data%</a>";
 
 var HTMLskillsChartStart = "<div class='chart' id='skillsChart'></div>";
