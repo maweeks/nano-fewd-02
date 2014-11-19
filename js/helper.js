@@ -56,8 +56,6 @@ var HTMLonlineDates = "<div class='date-text'>%data%</div>";
 var HTMLonlineURL = "<br><a href='#'>%data%</a>";
 
 var HTMLskillsChartStart = "<div class='chart' id='skillsChart'></div>";
-var HTMLskillsChartSkill = "<p>%data%"
-var HTMLskillsChartLevel = "%data%</p>"
 
 var internationalizeButton = "<button>Internationalize</button>";
 var googleMap = "<div id='map'></div>";

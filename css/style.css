@@ -4,7 +4,7 @@
     font-family: 'Roboto', sans-serif;
 }
 
-.education-entry, .work-entry, .project-entry {
+.education-entry, .work-entry, .project-entry, #skillsChart {
   padding-bottom: 10px;
   padding-left: 5%;
   padding-right: 5%;
@@ -164,7 +164,7 @@ img {
 }
 
 /* Bar chart stuff */
-/*#skillsChart {
+/*.chart div {
   font: 10px sans-serif;
   background-color: #000199;
   text-align: right;
@@ -177,12 +177,11 @@ img {
 .chart div {
   font: 10px sans-serif;
   background-color: steelblue;
-  text-align: right;
+  text-align: left;
   padding: 3px;
   margin: 1px;
   color: white;
 }
-
 
 span {
   padding: 5px;

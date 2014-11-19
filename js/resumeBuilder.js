@@ -77,6 +77,7 @@ var projects = {
 var skills = [
   {"skill": "C++", "level": "1"},
   {"skill": "CSS", "level": "4"},
+  {"skill": "Git", "level": "3"},
   {"skill": "HTML", "level": "4"},
   {"skill": "Java", "level": "4"},
   {"skill": "JavaScript", "level": "3"},
@@ -192,15 +193,6 @@ education.display = function() {
 }
 
 skills.display = function() {
-  // for(i = 0; i < skills.length; i++) {
-  //   $("#chart").append(HTMLskillsChartStart);
-  //   var formattedSkillSkill = HTMLskillsChartSkill.replace("%data%", skills[i].skill);
-  //   var formattedSkillLevel = HTMLskillsChartLevel.replace("%data%", skills[i].level);
-  //   var formattedSkill = formattedSkillSkill + formattedSkillLevel;
-  //   $(".skills-entry:last").append(formattedSkill);
-  //   console.log(i);
-  // }
-  
   $("#chart").append(HTMLskillsChartStart);
 
   var data = [4, 8, 15, 16, 23, 42];
@@ -213,6 +205,7 @@ skills.display = function() {
     .selectAll("div")
       .data(skills)
     .enter().append("div")
+      .attr("class", "skills-entry")
       .style("width", function(d) { return x(d.level*18) + "%"; })
       .text(function(d) { return d.skill; });
 }
@@ -223,9 +216,9 @@ function displayMap() {
 
 //Functions to fill page content.
 bio.display();
-// work.display();
-// projects.display();
-// education.display();
+//work.display();
+//projects.display();
+education.display();
 skills.display();
 displayMap();
 bio.displayFooter();
