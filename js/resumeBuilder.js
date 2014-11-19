@@ -6,7 +6,7 @@ var bio = {
     "mobile": "(+44) 7515 772 568",
     "email": "m_weeks@hotmail.co.uk",
     "github": "maweeks",
-    "twitter": "@mad_mn",
+    "twitter" : "@mad_mn",
     "location": "Canterbury, UK"
   },
   "skills": [
@@ -123,9 +123,9 @@ bio.display = function() {
 
 bio.getContacts = function() {
   var formattedContacts = HTMLmobile.replace("%data%", bio.contacts.mobile);
-  formattedContacts += HTMLemail.replace("%data%", bio.contacts.email);
-  formattedContacts += HTMLgithub.replace("%data%", bio.contacts.github);
-  formattedContacts += HTMLtwitter.replace("%data%", bio.contacts.twitter);
+  formattedContacts += HTMLemail.replace("%data%", bio.contacts.email).replace("#", "mailto:" + bio.contacts.email);
+  formattedContacts += HTMLgithub.replace("%data%", bio.contacts.github).replace("#", "https://github.com/" + bio.contacts.github);
+  formattedContacts += HTMLtwitter.replace("%data%", bio.contacts.twitter).replace("#", "https://twitter.com/" + bio.contacts.twitter);
   formattedContacts += HTMLlocation.replace("%data%", bio.contacts.location);
   return formattedContacts;
 }
@@ -216,9 +216,9 @@ function displayMap() {
 
 //Functions to fill page content.
 bio.display();
-//work.display();
-//projects.display();
-//education.display();
+work.display();
+projects.display();
+education.display();
 skills.display();
 displayMap();
 bio.displayFooter();
