@@ -69,19 +69,22 @@ var projects = {
       "title": "AVOS",
       "dates": "Jan 2014 - May 2014",
       "description": "A visualization to improve visibily for OpenStack.",
-      "images": []
+      "images": [],
+      "link" : "http://www.slideshare.net/ddutta1/openstack-atlanta-2014predictiveanalytics"
     },
     {
       "title": "Portfolio",
       "dates": "Sep 2014",
       "description": "A portfolio created using CSS and HTML to showcase my work.",
-      "images": []
+      "images": [],
+      "link" : "http://maweeks.github.io/nano-fewd-01/"
     },
     {
       "title": "Interactive Resume",
       "dates": "Oct 2014",
       "description": "A webpage to show my skills, education and past work.",
-      "images": []
+      "images": [],
+      "link" : "http://maweeks.github.io/nano-fewd-02/"
     }
   ]
 };
@@ -99,11 +102,12 @@ var skills = [
 var work = {
   "jobs": [
     {
-      "employer": "Cisco Systems",
-      "title": "Cloud Developer",
-      "location": "San Jose, CA, USA",
-      "dates": "Aug 2013 - Jul 2014",
-      "description": "Working on the OpenSource project OpenStack, projects include creating a visualization tool to give greater visibility of the stack."
+      "employer" : "Cisco Systems",
+      "title" : "Cloud Developer",
+      "location" : "San Jose, CA, USA",
+      "dates" : "Aug 2013 - Jul 2014",
+      "description" : "Working on the OpenSource project OpenStack, projects include creating a visualization tool to give greater visibility of the stack.",
+      "link" : "http://lnkd.in/dMcQJ2J"
     }
   ]
 };
@@ -149,7 +153,7 @@ bio.displayFooter = function() {
 work.display = function() {
 	for(job in work.jobs) {
 		$("#workExperience").append(HTMLworkStart);
-		var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+		var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer).replace("#",work.jobs[job].link);
 		var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
     var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
     var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
@@ -163,7 +167,7 @@ projects.display = function() {
 	for (project in projects.projects) {
 		$("#projects").append(HTMLprojectStart);
 
-		var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
+		var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title).replace("#", projects.projects[project].link);
 		$(".project-entry:last").append(formattedTitle);
 		
 		var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
