@@ -245,7 +245,6 @@ span {
 }
 
 #mapHolder {
-  background-color: none !important;
   display: block;
   height: 325px;
   margin-left: 5%;
