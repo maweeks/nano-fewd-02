@@ -20,9 +20,9 @@ body {
 
 .showHide {
   display: inline;
-  height: 20px;
+  height: 16px;
   padding: 0 10px 0 0;
-  width: 20px;
+  width: 16px;
 }
 
 .subCourse {
@@ -209,7 +209,7 @@ img {
 }*/
 .chart div {
   font: 10px sans-serif;
-  background-color: steelblue;
+  background-color: #3498db;
   text-align: left;
   padding: 3px;
   margin: 2px;
