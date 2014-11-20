@@ -260,9 +260,16 @@ function showHideDiv(divID) {
   if (document.getElementById(divID + "Content").style.display == "none") {
     document.getElementById(divID + "Content").style.display = "block";
     document.getElementById(divID + "SH").src = "images/icon-minus.png";
+    if (divID == "map") { resizeMap(); }
   }
   else {
     document.getElementById(divID + "Content").style.display = "none";
     document.getElementById(divID + "SH").src = "images/icon-plus.png";
   }
+}
+
+//Google maps breaks if container size is changed while map is not shown until it is shown again.
+//This fixes that issue.
+function resizeMap() {
+  google.maps.event.trigger(map, 'resize');
 }
