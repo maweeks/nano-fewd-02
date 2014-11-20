@@ -10,8 +10,16 @@ body {
 
 .education-entry, .work-entry, .project-entry, #skillsChart {
   padding-bottom: 10px;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.restrict-width {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1000px;
+  padding-left: 3%;
+  padding-right: 3%;
 }
 
 .javaClick {
@@ -64,8 +72,8 @@ h4 {
 
 h2, h3, h4, h5 {
   padding:10px;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .contactLink {
@@ -154,7 +162,7 @@ a {
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #333;
 }
 
 .flex-box {
@@ -178,7 +186,7 @@ a {
 }
 
 .center-content {
-  padding: 20px 5% 25px 5%;
+  padding: 20px 3% 25px 3%;
 }
 
 ul {
@@ -196,17 +204,6 @@ img {
   padding: 10px;
 }
 
-/* Bar chart stuff */
-/*.chart div {
-  font: 10px sans-serif;
-  background-color: #000199;
-  text-align: right;
-  padding: 3px;
-  margin: 1px;
-  height: 12px;
-  color: white;
-  display: inline;
-}*/
 .chart div {
   font: 10px sans-serif;
   background-color: #3498db;

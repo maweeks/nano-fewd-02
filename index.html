@@ -57,35 +57,37 @@
       resume below. You can pretty easily figure out what each section will
       display by looking at the id or at what's written between the <h2> tags.
       -->
-      <div id="header" class="center-content">
+      <div id="header" class="center-content restrict-width">
         <ul id="topContacts" class='flex-box'></ul>
       </div>
       <div style='clear: both;'></div>
-      <div id="workExperience" class='gray'>
+      <div id="workExperience" class='gray restrict-width'>
         <h2 class="no-colapse"><a class="javaClick" onclick="showHideDiv('work');"><img alt="Colapse trigger image" class="showHide" id="workSH" src="images/icon-minus.png"/></a>Work Experience</h2>
         <div id="workContent"></div>
       </div>
-      <div id="projects" class='white'>
+      <div id="projects" class='white restrict-width'>
         <h2 class="no-colapse"><a class="javaClick" onclick="showHideDiv('projects');"><img alt="Colapse trigger image" class="showHide" id="projectsSH" src="images/icon-minus.png"/></a>Projects</h2>
         <div id="projectsContent"></div>
       </div>
-      <div id="education" class='gray'>
+      <div id="education" class='gray restrict-width'>
         <h2 class="no-colapse"><a class="javaClick" onclick="showHideDiv('education');"><img alt="Colapse trigger image" class="showHide" id="educationSH" src="images/icon-minus.png"/></a>Education</h2>
         <div id="educationContent"></div>
       </div>
-      <div id="chart" class='white'>
+      <div id="chart" class='white restrict-width'>
         <h2 class="no-colapse"><a class="javaClick" onclick="showHideDiv('chart');"><img alt="Colapse trigger image" class="showHide" id="chartSH" src="images/icon-minus.png"/></a>Skills Chart</h2>
         <div id="chartContent"></div>
       </div>
-      <div id="mapDiv" class='gray'>
+      <div id="mapDiv" class='gray restrict-width'>
         <h2 class="no-colapse"><a class="javaClick" onclick="showHideDiv('map');"><img alt="Colapse trigger image" class="showHide" id="mapSH" src="images/icon-minus.png"/></a>Where I Have Lived and Worked</h2>
         <div id="mapContent">
           <div id="mapHolder"></div>
         </div>
       </div>
       <div id="letsConnect" class='dark-gray'>
-        <h2 class='orange center-text white-text'>Let's Connect!</h2>
-        <ul id="footerContacts" class="flex-box">
+        <h2 class='orange center-text white-text restrict-width'>Let's Connect!</h2>
+        <div id="fContacts" class="restrict-width">
+          <ul id="footerContacts" class="flex-box">
+        </div>
         </ul>
       </div>
     </div>
