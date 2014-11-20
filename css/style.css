@@ -240,16 +240,16 @@ span {
 }
 
 #mapContent {
+  height: 325px;
+  padding-bottom: 20px;
+}
+
+#mapHolder {
   background-color: none !important;
   display: block;
   height: 325px;
   margin-left: 5%;
   margin-right: 5%;
-  /*padding-bottom: 20px;*/
-}
-
-#mapDiv {
-  padding-bottom: 20px;
 }
 
 .gm-style {

@@ -215,7 +215,7 @@ education.display = function() {
 skills.display = function() {
   $("#chartContent").append(HTMLskillsChartStart);
 
-  var data = [4, 8, 15, 16, 23, 42];
+  // var data = [4, 8, 15, 16, 23, 42];
 
   var x = d3.scale.linear()
       .domain([0, 50])
@@ -231,7 +231,7 @@ skills.display = function() {
 }
 
 function displayMap() {
-  $("#mapContent").append(googleMap);
+  $("#mapHolder").append(googleMap);
 }
 
 //Functions to fill page content.
