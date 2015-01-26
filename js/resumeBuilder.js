@@ -85,6 +85,13 @@ var projects = {
       "description": "A webpage to show my skills, education and past work.",
       "images": [],
       "link" : "http://maweeks.github.io/nano-fewd-02/"
+    },
+    {
+      "title": "Frogger Clone",
+      "dates": "Jan 2015",
+      "description": "The game is called 'Let's go swimming!' The purpose of this project was to create a clone of the popular arcade game Frogger given the visual assets and the game engine. In this version you have to get the player to water avoiding the bugs, if you get hit by a bug you lose, the number of times you reach the water is your score. ",
+      "images": [],
+      "link" : "http://maweeks.github.io/nano-fewd-03/"
     }
   ]
 };
@@ -169,10 +176,10 @@ projects.display = function() {
 
 		var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title).replace("#", projects.projects[project].link);
 		$(".project-entry:last").append(formattedTitle);
-		
+
 		var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
 		$(".project-entry:last").append(formattedDates);
-		
+
 		var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
 		$(".project-entry:last").append(formattedDescription);
 		if (projects.projects[project].images.length > 0) {
