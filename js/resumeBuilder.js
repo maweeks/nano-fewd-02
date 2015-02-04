@@ -92,6 +92,13 @@ var projects = {
       "description": "The game is called 'Let's go swimming!' The purpose of this project was to create a clone of the popular arcade game Frogger given the visual assets and the game engine. In this version you have to get the player to water avoiding the bugs, if you get hit by a bug you lose, the number of times you reach the water is your score. ",
       "images": [],
       "link" : "http://maweeks.github.io/nano-fewd-03/"
+    },
+    {
+      "title": "Web Optimization",
+      "dates": "Feb 2015",
+      "description": "The purpose of this project was to optimize a specified website that contains multiple optimization and performance related issues to achieve 60 fps and a target PageSpeed score.",
+      "images": [],
+      "link" : "http://maweeks.github.io/nano-fewd-04/"
     }
   ]
 };
