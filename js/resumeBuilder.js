@@ -57,6 +57,18 @@ var education = {
         {
           "course": "Intro to jQuery",
           "link": "https://www.udacity.com/course/ud245"
+        },
+        {
+          "course": "Object-Oriented Javascript",
+          "link": "https://www.udacity.com/course/ud015"
+        },
+        {
+          "course": "HTML5 Canvas",
+          "link": "https://www.udacity.com/course/ud292"
+        },
+        {
+          "course": "Website Performance Optimization",
+          "link": "https://www.udacity.com/course/ud884"
         }
       ]
     }
