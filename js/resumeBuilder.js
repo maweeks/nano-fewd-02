@@ -90,28 +90,42 @@ var education = {
 var projects = {
   "projects": [
     {
-      "title": "Web Optimization",
+      "title": "Feed Reader Testing - FEWD Nanodegree Project 6",
+      "dates": "May 2015",
+      "description": "Given a prewritten website, the task was to generate tests to check that all required aspects of the website are working correctly automatically using Jasmine.",
+      "images": [],
+      "link" : "http://maweeks.github.io/nano-fewd-06/"
+    },
+    {
+      "title": "Neighborhood Map - FEWD Nanodegree Project 5",
+      "dates": "Apr 2015",
+      "description": "The purpose of this project was to develop a neighborhood map application that can retrieve third-party data and highlight specific locations.",
+      "images": [],
+      "link" : "http://maweeks.github.io/nano-fewd-05/"
+    },
+    {
+      "title": "Web Optimization - FEWD Nanodegree Project 4",
       "dates": "Feb 2015",
       "description": "The purpose of this project was to optimize a specified website that contains multiple optimization and performance related issues to achieve 60 fps and a target PageSpeed score.",
       "images": [],
       "link" : "http://maweeks.github.io/nano-fewd-04/"
     },
     {
-      "title": "Frogger Clone",
+      "title": "Frogger Clone - FEWD Nanodegree Project 3",
       "dates": "Jan 2015",
-      "description": "The game is called 'Let's go swimming!' The purpose of this project was to create a clone of the popular arcade game Frogger given the visual assets and the game engine. In this version you have to get the player to water avoiding the bugs, if you get hit by a bug you lose, the number of times you reach the water is your score. ",
+      "description": "The game is called 'Let's go swimming!' The purpose of this project was to create a clone of the popular arcade game Frogger given the visual assets and the game engine. In this version you have to get the player to water avoiding the bugs, if you get hit by a bug you lose, the number of times you reach the water is your score.",
       "images": [],
       "link" : "http://maweeks.github.io/nano-fewd-03/"
     },
     {
-      "title": "Interactive Resume",
+      "title": "Interactive Resume - Nanodegree FEWD Project 2",
       "dates": "Oct 2014",
-      "description": "A webpage to show my skills, education and past work.",
+      "description": "A webpage to showcase my skills, education and past work.",
       "images": [],
       "link" : "http://maweeks.github.io/nano-fewd-02/"
     },
     {
-      "title": "Portfolio",
+      "title": "Portfolio - FEWD Nanodegree Project 1",
       "dates": "Sep 2014",
       "description": "A portfolio created using CSS and HTML to showcase my work.",
       "images": [],
