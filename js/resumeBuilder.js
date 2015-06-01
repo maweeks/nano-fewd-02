@@ -10,7 +10,7 @@ var bio = {
     "location": "Canterbury, UK"
   },
   "skills": [
-    "Java", "Visual Basic", "JavaScript", "HTML", "CSS"
+    "CSS", "HTML", "JavaScript", "Java", "Visual Basic"
   ],
   "pic": "https://media.licdn.com/mpr/mpr/shrink_200_200/p/8/005/05e/259/3d8e9fe.jpg"
 };
@@ -69,6 +69,18 @@ var education = {
         {
           "course": "Website Performance Optimization",
           "link": "https://www.udacity.com/course/ud884"
+        },
+        {
+          "course": "Intro to AJAX",
+          "link": "https://www.udacity.com/course/ud110"
+        },
+        {
+          "course": "Javascript Design Patterns",
+          "link": "https://www.udacity.com/course/ud989"
+        },
+        {
+          "course": "Javascript Testing",
+          "link": "https://www.udacity.com/course/ud549"
         }
       ]
     }
@@ -78,25 +90,11 @@ var education = {
 var projects = {
   "projects": [
     {
-      "title": "AVOS",
-      "dates": "Jan 2014 - May 2014",
-      "description": "A visualization to improve visibily for OpenStack.",
+      "title": "Web Optimization",
+      "dates": "Feb 2015",
+      "description": "The purpose of this project was to optimize a specified website that contains multiple optimization and performance related issues to achieve 60 fps and a target PageSpeed score.",
       "images": [],
-      "link" : "http://www.slideshare.net/ddutta1/openstack-atlanta-2014predictiveanalytics"
-    },
-    {
-      "title": "Portfolio",
-      "dates": "Sep 2014",
-      "description": "A portfolio created using CSS and HTML to showcase my work.",
-      "images": [],
-      "link" : "http://maweeks.github.io/nano-fewd-01/"
-    },
-    {
-      "title": "Interactive Resume",
-      "dates": "Oct 2014",
-      "description": "A webpage to show my skills, education and past work.",
-      "images": [],
-      "link" : "http://maweeks.github.io/nano-fewd-02/"
+      "link" : "http://maweeks.github.io/nano-fewd-04/"
     },
     {
       "title": "Frogger Clone",
@@ -106,11 +104,25 @@ var projects = {
       "link" : "http://maweeks.github.io/nano-fewd-03/"
     },
     {
-      "title": "Web Optimization",
-      "dates": "Feb 2015",
-      "description": "The purpose of this project was to optimize a specified website that contains multiple optimization and performance related issues to achieve 60 fps and a target PageSpeed score.",
+      "title": "Interactive Resume",
+      "dates": "Oct 2014",
+      "description": "A webpage to show my skills, education and past work.",
       "images": [],
-      "link" : "http://maweeks.github.io/nano-fewd-04/"
+      "link" : "http://maweeks.github.io/nano-fewd-02/"
+    },
+    {
+      "title": "Portfolio",
+      "dates": "Sep 2014",
+      "description": "A portfolio created using CSS and HTML to showcase my work.",
+      "images": [],
+      "link" : "http://maweeks.github.io/nano-fewd-01/"
+    },
+    {
+      "title": "AVOS",
+      "dates": "Jan 2014 - May 2014",
+      "description": "A visualization to improve visibily for OpenStack.",
+      "images": [],
+      "link" : "http://www.slideshare.net/ddutta1/openstack-atlanta-2014predictiveanalytics"
     }
   ]
 };
