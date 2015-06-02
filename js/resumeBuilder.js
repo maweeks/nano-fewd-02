@@ -90,6 +90,13 @@ var education = {
 var projects = {
   "projects": [
     {
+      "title": "KentProjects - University of Kent",
+      "dates": "Sep 2014 - May 2015",
+      "description": "The solution to my undergraduate final year group project. Creating a system that could replace the existing system for that enables students to get into groups, choose their projects and get them approved by the respective supervisors in as simple a way as possible.",
+      "images": [],
+      "link" : "http://kentprojects.com/"
+    },
+    {
       "title": "Feed Reader Testing - FEWD Nanodegree Project 6",
       "dates": "May 2015",
       "description": "Given a prewritten website, the task was to generate tests to check that all required aspects of the website are working correctly automatically using Jasmine.",
@@ -132,7 +139,7 @@ var projects = {
       "link" : "http://maweeks.github.io/nano-fewd-01/"
     },
     {
-      "title": "AVOS",
+      "title": "AVOS - Cisco Systems",
       "dates": "Jan 2014 - May 2014",
       "description": "A visualization to improve visibily for OpenStack.",
       "images": [],
