@@ -92,7 +92,7 @@ var projects = {
     {
       "title": "KentProjects - University of Kent",
       "dates": "Sep 2014 - May 2015",
-      "description": "The solution to my undergraduate final year group project. Creating a system that could replace the existing system for that enables students to get into groups, choose their projects and get them approved by the respective supervisors in as simple a way as possible.",
+      "description": "The solution to my undergraduate final year group project. Creating an application that could replace the existing system for that enables students to get into groups, choose their projects and get them approved by the respective supervisors in as simple a way as possible.",
       "images": [],
       "link" : "http://kentprojects.com/"
     },
