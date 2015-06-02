@@ -38,7 +38,7 @@ var education = {
     {
       "title": "Front-End Web Developer Nanodegree",
       "school": "Udacity",
-      "dates": "Sep 2014 - Present",
+      "dates": "Sep 2014 - May 2015",
       "description" : "Awesome thing",
       "url": "https://www.udacity.com/course/nd001",
       "includedCourses" : [
@@ -125,7 +125,7 @@ var projects = {
       "link" : "http://maweeks.github.io/nano-fewd-03/"
     },
     {
-      "title": "Interactive Resume - Nanodegree FEWD Project 2",
+      "title": "Interactive Resume - FEWD Nanodegree Project 2",
       "dates": "Oct 2014",
       "description": "A webpage to showcase my skills, education and past work.",
       "images": [],
